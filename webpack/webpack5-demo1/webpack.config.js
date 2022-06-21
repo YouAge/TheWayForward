@@ -12,8 +12,14 @@ module.exports = {
   module: {
     rules: [
       {test: /.css$/, use: [ 'style-loader','css-loader']},
-      {test: /.md$/, use: ['html-loader',path.resolve(__dirname,'./loader/marked-loader.js')]}
-      // {test: /.jl$/, use: [path.resolve(__dirname,'./loader/jl-loader.js')]}
+      {test: /.md$/, use: ['html-loader',path.resolve(__dirname,'./loader/marked-loader.js')]},
+      {test: /.js$/, use: {
+          loader: path.resolve(__dirname,'./loader/banner-loader.js'),
+          options:{
+            text:'甲乐',
+            filename: path.resolve(__dirname,'banner.js')
+          }
+        }},
     ]
   },
   plugins: [
