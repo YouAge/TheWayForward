@@ -13,14 +13,14 @@
     "@babel/core": "^7.18.5",
     "css-loader": "^6.7.1",
     "loader-utils": "^1.1.0",
+    "schema-utils": "^4.0.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.72.1",
     "webpack-cli": "^4.9.2",
-    "schema-utils": "^4.0.0"
+    "webpack-sources": "^3.2.3"
   },
   "dependencies": {
     "html-loader": "^3.1.2",
     "marked": "^4.0.17"
-
   }
 }

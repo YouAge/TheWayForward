@@ -1,6 +1,7 @@
 
 const path = require('path')
 const webpack = require('webpack')
+const FooterPlugin = require('./plugin/FooterPlugin.js')
 module.exports = {
   mode: 'development', // "development", // production
   // devtool: 'source-map', // 编译模式
@@ -25,6 +26,9 @@ module.exports = {
   plugins: [
      new webpack.BannerPlugin({
        banner: "欢迎大家 来学习 webpack"
-     })
+     }),
+    new FooterPlugin({
+      banner: "webpack 插件"
+    })
   ]
 }
