@@ -49,7 +49,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ind
   \**********************/
 /***/ ((module) => {
 
-eval("/**甲乐科技\n**/\nmodule.exports = {\n  title : 'title'\n}\n\n//# sourceURL=webpack://webpack5-vue/./src/title.js?");
+eval("/**甲乐科技\n**/\r\nmodule.exports = {\r\n  title : 'title'\r\n}\n\n//# sourceURL=webpack://webpack5-vue/./src/title.js?");
 
 /***/ }),
 

@@ -9,7 +9,8 @@ class FooterPlugin{
     compiler.hooks.compilation.tap('FooterPlugin',compiltaion=>{ // 注册组件
       compiltaion.hooks.processAssets.tap('FooterPlugin',()=>{
         const chunks =  compiltaion.chunks
-        console.log('FooterPlugin', chunks)
+        console.log('FooterPlugin', chunks,compiltaion)
+        debugger
         for (const chunks of  compiltaion.chunks){
           for(const  file of chunks.files){ // 获取文件
             const comment = `/* ${this.options.banner} */`
@@ -21,5 +22,4 @@ class FooterPlugin{
     })
   }
 }
-
 module.exports = FooterPlugin
