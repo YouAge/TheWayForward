@@ -14,7 +14,7 @@ class FooterPlugin{
           for(const  file of chunks.files){ // 获取文件
             const comment = `/* ${this.options.banner} */`
             // 更新内容
-            compiltaion.updateAsset(file,old=>new ConcatSource(old,'\n',comment))
+            compiltaion.updateAsset(file,old=>new ConcatSource(old,'\n',comment)) // 合并2个代码
           }
         }
       })
