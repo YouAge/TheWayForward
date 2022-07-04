@@ -24,3 +24,5 @@ pnpm-debug.log*
 *.sw?
 
 package-lock.json
+
+分支.md
