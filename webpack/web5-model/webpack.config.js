@@ -30,7 +30,7 @@ module.exports =  {
      // html中使用 <%= BASE_URL %>
     new DefinePlugin({
       BASE_URL:'"./"',
-      TITLE: '流调系统'
+      // TITLE: '项目
     }),
      // 拷贝某个目录下
      new CopyWebpackPlugin(
