@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app"></div>
+<script type="module">
+ import Vue from './src/index.js'
+ const vm =  new Vue({
+    el:"#app",
+    data(){
+      return {
+        a:111
+      }
+    },
+   // render(h) {
+   //   return h('div',{id:'a'},'hello')
+   // },
+   template:`<div id="a">hello {{a}}</div>`
+ })
+    vm.a = '你好'
+
+ setTimeout(() => {
+   vm.a = 456;
+   // 此方法是刷新视图的核心
+   // vm._update(vm._render());
+   vm.template=`<div id="a">hello13</div>`
+   console.log(vm.a)
+ }, 1000);
+</script>
+
+
+
+<script>
+
+    var btp = {
+      a:[1,2]
+    }
+    let op = [1,2]
+    Object.defineProperty(btp,'a',{
+      get() {
+        console.log('获取---')
+        return op
+      },
+      set(v) {
+        console.log('设置 数组')
+        op =v
+      }
+    })
+
+</script>
+
+</body>
+</html>

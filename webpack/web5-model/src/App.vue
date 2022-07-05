@@ -1,14 +1,24 @@
 
 <template>
   <div class="abc">
-  safd sdfadsfs
-    <img src="./assets/img/hsyj-kai.png" />
+  safd sdfadsfs {{ tale}}
+    <img src="@/assets/img/hsyj-kai.png" />
+    <home />
+    <vue-fun />
   </div>
 </template>
 
 <script>
+import Home from "@/home.vue";
+import VueFun from "@/vueFun.js";
 export default {
-
+    name:'app',
+  components: {VueFun, Home},
+  data(){
+      return{
+        tale:'小白'
+      }
+    }
 }
 </script>
 
