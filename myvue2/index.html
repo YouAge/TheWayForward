@@ -5,20 +5,32 @@
     <title>Title</title>
 </head>
 <body>
-<div id="app"></div>
+<div id="app">
+    <div>{{a}}</div>
+    <div>
+        <span>嗨， 你好啊</span>
+        <div>{{name}}</div>
+    </div>
+</div>
 <script type="module">
  import Vue from './src/index.js'
  const vm =  new Vue({
     el:"#app",
     data(){
       return {
-        a:111
+        a:111,
+          name:'小不点'
       }
     },
+     methods:{
+         getModel(){
+             alert('我一点也不好～～～')
+         }
+     }
    // render(h) {
    //   return h('div',{id:'a'},'hello')
    // },
-   template:`<div id="a">hello {{a}}</div>`
+   // template:`<div id="a">hello {{a}}</div>`
  })
     vm.a = '你好'
 

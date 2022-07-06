@@ -32,11 +32,13 @@ export function initMixin(Vue){
     if(!options.render){
       let template = options.template
       if(!template && el){
-        template = el.outerHeight
+        // 不存在 render 和template时, 但是存在el属性 直接将模板赋值到el所在的外层html结构（就是el本身 并不是父元素）
+        template = el.outerHTML;
       }
       // 最终需要把tempalte模板转化成render函数
       if (template) {
         const render = compileToFunctions(template); // template 转成 render函数
+        console.log(render)
         options.render = render;
       }
     }

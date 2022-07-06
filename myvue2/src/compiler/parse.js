@@ -139,6 +139,12 @@ export function parse(html) {
   function advance(n) {
     html = html.substring(n);
   }
+
+  // 对指令对方法进行操作
+  function compileElemnt(){
+
+  }
+
   //   返回生成的ast
   return root;
 }
