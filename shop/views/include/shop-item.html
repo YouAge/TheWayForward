@@ -1,0 +1,30 @@
+<div class="product">
+  <div class="thumb">
+    <a href="/shop-details/{{$data.id}}" class="image">
+      <img src="{{$data.image}}" alt="Product" />
+      <img class="hover-image" src="{{$data.image2}}" alt="Product" />
+    </a>
+    <span class="badges">
+                      {{if $data.discountPrice}}
+                     <span class="sale">-{{$data.discountPrice}}%</span>
+                      {{/if}}
+                      {{if $data.new >50}}
+                      <span class="new">New</span>
+                       {{/if}}
+                    </span>
+    <div class="actions">
+      <a href="/shop-details/{{$data.id}}" class="action wishlist" title="Wishlist"><i
+              class="icon-heart"></i></a>
+      <a href="/shop-details/{{$data.id}}" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+              class="icon-size-fullscreen"></i></a>
+      <!--                      <a href="compare.html" class="action compare" title="Compare"><i-->
+      <!--                          class="icon-refresh"></i></a>-->
+    </div>
+    <button title="Add To Cart" class=" add-to-cart" onclick="addCart('{{$data.id}}','{{ userinfo}}')">添加购物车</button>
+  </div>
+  <div class="content">
+    <h5 class="title"><a href="#">{{$data.title}}</a></h5>
+    <span class="price"><span class="new">￥{{$data.price}}</span></span>
+  </div>
+</div>
+

@@ -1,0 +1,42 @@
+{
+  "name": "koa-shop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/cors": "^3.1.0",
+    "ajv": "^8.6.0",
+    "ajv-errors": "^3.0.0",
+    "ajv-formats": "^2.1.0",
+    "ajv-i18n": "^4.0.0",
+    "art-template": "^4.13.2",
+    "bcryptjs": "^2.4.3",
+    "ejs": "^3.1.6",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.13.1",
+    "koa-art-template": "^1.1.1",
+    "koa-body": "^4.2.0",
+    "koa-json-error": "^3.1.2",
+    "koa-jwt": "^4.0.1",
+    "koa-parameter": "^3.0.1",
+    "koa-router": "^10.0.0",
+    "koa-session": "^6.2.0",
+    "koa-static": "^5.0.0",
+    "koa-static-router": "^1.5.0",
+    "koa-views": "^7.0.1",
+    "koa2-cors": "^2.0.6",
+    "koa2-ratelimit": "^0.9.0",
+    "moment": "^2.29.1",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.7",
+    "require-directory": "^2.1.1",
+    "sequelize": "^6.6.2"
+  }
+}

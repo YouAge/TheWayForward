@@ -1,0 +1,340 @@
+
+{{ include 'include/header.html'}}
+
+<!--轮播图-->
+<div class="section ">
+  <div class="hero-slider swiper-container slider-nav-style-1 slider-dot-style-1">
+    <!-- Hero slider Active -->
+    <div class="swiper-wrapper">
+      <!-- Single slider item -->
+      <div class="hero-slide-item slider-height swiper-slide d-flex">
+        <div class="container align-self-center">
+          <div class="row">
+            <div class="col-xl-6 col-lg-7 col-md-7 col-sm-7 align-self-center">
+              <div class="hero-slide-content slider-animated-1">
+                <span class="category">新产品</span>
+                <h2 class="title-1">灵活的椅子 </h2>
+                <p>我们一直都是这样，一直都是这样，一直都是这样，一直都是这样</p>
+                <a href="#" class="btn btn-lg btn-primary btn-hover-dark mt-5">购买</a>
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-5 col-md-5 col-sm-5">
+              <div class="hero-slide-image">
+                <img src="assets/images/slider-image/slider-1.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Single slider item -->
+      <div class="hero-slide-item slider-height swiper-slide d-flex">
+        <div class="container align-self-center">
+          <div class="row">
+            <div class="col-xl-6 col-lg-7 col-md-7 col-sm-7 align-self-center">
+              <div class="hero-slide-content slider-animated-1">
+                <span class="category">新产品</span>
+                <h2 class="title-1">懒人座椅 </h2>
+                <p>我们一直都是这样，一直都是这样，一直都是这样，一直都是这样</p>
+                <a href="#" class="btn btn-lg btn-primary btn-hover-dark mt-5">购买</a>
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-5 col-md-5 col-sm-5">
+              <div class="hero-slide-image">
+                <img src="assets/images/slider-image/slider-2.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination swiper-pagination-white"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-buttons">
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+</div>
+
+<!--小样品-->
+<div class="section pb-100px pt-100px">
+  <div class="container">
+    <!-- Banners Start -->
+    <div class="row">
+      <!-- Banner Start -->
+      <div class="col-lg-4 col-12 mb-md-30px mb-lm-30px" data-aos="fade-up" data-aos-delay="200">
+        <div class="banner-2">
+          <img src="assets/images/banner/5.jpg" alt="" />
+          <div class="info justify-content-start">
+            <div class="content align-self-center">
+              <h3 class="title">
+                New Office Chair <br /> Collection
+              </h3>
+              <a href="shop-left-sidebar.html" class="shop-link">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Banner End -->
+
+      <!-- Banner Start -->
+      <div class="col-lg-4 col-12 mb-md-30px mb-lm-30px" data-aos="fade-up" data-aos-delay="400">
+        <div class="banner-2">
+          <img src="assets/images/banner/6.jpg" alt="" />
+          <div class="info justify-content-start">
+            <div class="content align-self-center">
+              <h3 class="title">
+                Living Room <br /> Collection </h3>
+              <a href="shop-left-sidebar.html" class="shop-link">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Banner End -->
+
+      <!-- Banner Start -->
+      <div class="col-lg-4 col-12" data-aos="fade-up" data-aos-delay="600">
+        <div class="banner-2">
+          <img src="assets/images/banner/7.jpg" alt="" />
+          <div class="info justify-content-start">
+            <div class="content align-self-center">
+              <h3 class="title">
+                Children Room <br /> Collection
+              </h3>
+              <a href="shop-left-sidebar.html" class="shop-link">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Banner End -->
+    </div>
+    <!-- Banners End -->
+  </div>
+</div>
+
+<!--商品筛选-->
+<div class="section product-tab-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center" data-aos="fade-up">
+        <div class="section-title mb-0">
+          <h2 class="title">我们的产品</h2>
+          <p class="sub-title mb-6">Torem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmo tempor incididunt ut labore</p>
+        </div>
+      </div>
+
+      <!-- Tab Start -->
+      <div class="col-md-12 text-center mb-8" data-aos="fade-up" data-aos-delay="200">
+        <ul class="product-tab-nav nav justify-content-center">
+          <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#tab-product-new-arrivals">活动家具</a></li>
+<!--          <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#tab-product-best-sellers">畅销的</a></li>-->
+<!--          <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#tab-product-sale-item">特价</a></li>-->
+<!--          <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#tab-product-on-sales">特价出售</a></li>-->
+        </ul>
+      </div>
+      <!-- Tab End -->
+    </div>
+    <!--    //商品-->
+    <div class="row">
+      <div class="col">
+        <div class="tab-content">
+          <!-- 1st tab start -->
+          <div class="tab-pane fade show active" id="tab-product-new-arrivals">
+            <div class="row">
+              {{each goods}}
+              <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 mb-6" data-aos="fade-up" data-aos-delay="200">
+                <!-- Single Prodect -->
+                {{ include 'include/shop-item.html' $value}}
+
+              </div>
+              {{/each}}
+
+            </div>
+          </div>
+          <!-- 1st tab end -->
+          <!-- 2nd tab start -->
+          <div class="tab-pane fade" id="tab-product-best-sellers">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 mb-6" data-aos="fade-up" data-aos-delay="200">
+                <!-- Single Prodect -->
+                <div class="product">
+                  <div class="thumb">
+                    <a href="shop-left-sidebar.html" class="image">
+                      <img src="assets/images/product-image/1.jpg" alt="Product" />
+                      <img class="hover-image" src="assets/images/product-image/2.jpg" alt="Product" />
+                    </a>
+                    <span class="badges">
+                                                <span class="new">New</span>
+                                            </span>
+                    <div class="actions">
+                      <a href="wishlist.html" class="action wishlist" title="Wishlist"><i
+                          class="icon-heart"></i></a>
+                      <a href="#" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                          class="icon-size-fullscreen"></i></a>
+                      <a href="compare.html" class="action compare" title="Compare"><i
+                          class="icon-refresh"></i></a>
+                    </div>
+                    <button title="Add To Cart" class=" add-to-cart">Add
+                      To Cart</button>
+                  </div>
+                  <div class="content">
+                    <h5 class="title"><a href="shop-left-sidebar.html">Simple minimal Chair </a></h5>
+                    <span class="price">
+                                                <span class="new">$38.50</span>
+                                            </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 2nd tab end -->
+          <!-- 3rd tab start -->
+          <div class="tab-pane fade" id="tab-product-sale-item">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 mb-6" data-aos="fade-up" data-aos-delay="200">
+                <!-- Single Prodect -->
+                <div class="product">
+                  <div class="thumb">
+                    <a href="shop-left-sidebar.html" class="image">
+                      <img src="assets/images/product-image/1.jpg" alt="Product" />
+                      <img class="hover-image" src="assets/images/product-image/2.jpg" alt="Product" />
+                    </a>
+                    <span class="badges">
+                                                <span class="new">New</span>
+                                            </span>
+                    <div class="actions">
+                      <a href="wishlist.html" class="action wishlist" title="Wishlist"><i
+                          class="icon-heart"></i></a>
+                      <a href="#" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                          class="icon-size-fullscreen"></i></a>
+                      <a href="compare.html" class="action compare" title="Compare"><i
+                          class="icon-refresh"></i></a>
+                    </div>
+                    <button title="Add To Cart" class=" add-to-cart">Add
+                      To Cart</button>
+                  </div>
+                  <div class="content">
+                    <h5 class="title"><a href="shop-left-sidebar.html">Simple minimal Chair </a></h5>
+                    <span class="price">
+                                                <span class="new">$38.50</span>
+                                            </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 3rd tab end -->
+          <!-- 4th tab start -->
+          <div class="tab-pane fade" id="tab-product-on-sales">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 mb-6" data-aos="fade-up" data-aos-delay="200">
+                <!-- Single Prodect -->
+                <div class="product">
+                  <div class="thumb">
+                    <a href="shop-left-sidebar.html" class="image">
+                      <img src="assets/images/product-image/1.jpg" alt="Product" />
+                      <img class="hover-image" src="assets/images/product-image/2.jpg" alt="Product" />
+                    </a>
+                    <span class="badges">
+                                                <span class="new">New</span>
+                                            </span>
+                    <div class="actions">
+                      <a href="wishlist.html" class="action wishlist" title="Wishlist"><i
+                          class="icon-heart"></i></a>
+                      <a href="#" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                          class="icon-size-fullscreen"></i></a>
+                      <a href="compare.html" class="action compare" title="Compare"><i
+                          class="icon-refresh"></i></a>
+                    </div>
+                    <button title="Add To Cart" class=" add-to-cart">Add
+                      To Cart</button>
+                  </div>
+                  <div class="content">
+                    <h5 class="title"><a href="shop-left-sidebar.html">Simple minimal Chair </a></h5>
+                    <span class="price">
+                                                <span class="new">$38.50</span>
+                                            </span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 mb-6" data-aos="fade-up" data-aos-delay="400">
+                <!-- Single Prodect -->
+                <div class="product">
+                  <div class="thumb">
+                    <a href="shop-left-sidebar.html" class="image">
+                      <img src="assets/images/product-image/3.jpg" alt="Product" />
+                      <img class="hover-image" src="assets/images/product-image/4.jpg" alt="Product" />
+                    </a>
+                    <span class="badges">
+                                                <span class="sale">-10%</span>
+                                            <span class="new">New</span>
+                                            </span>
+                    <div class="actions">
+                      <a href="wishlist.html" class="action wishlist" title="Wishlist"><i
+                          class="icon-heart"></i></a>
+                      <a href="#" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                          class="icon-size-fullscreen"></i></a>
+                      <a href="compare.html" class="action compare" title="Compare"><i
+                          class="icon-refresh"></i></a>
+                    </div>
+                    <button title="Add To Cart" class=" add-to-cart">Add
+                      To Cart</button>
+                  </div>
+                  <div class="content">
+                    <h5 class="title"><a href="shop-left-sidebar.html">Wooden decorations</a></h5>
+                    <span class="price">
+                                                <span class="new">$38.50</span>
+                                            <span class="old">$48.50</span>
+                                            </span>
+                  </div>
+                </div>
+                <!-- Single Prodect -->
+              </div>
+            </div>
+          </div>
+          <!-- 4th tab end -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section pb-100px">
+  <div class="container">
+    <!-- section title start -->
+    <div class="row">
+      <div class="col-md-12" data-aos="fade-up">
+        <div class="section-title text-center mb-11">
+          <h2 class="title">新产品</h2>
+          <p class="sub-title">Torem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmo tempor incididunt ut labore
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- section title start -->
+    <div class="new-product-slider swiper-container slider-nav-style-1" data-aos="fade-up" data-aos-delay="200">
+      <div class="new-product-wrapper swiper-wrapper">
+        <!-- Single Prodect -->
+        {{each goods}}
+        {{ if $value.new>50}}
+        <div class="new-product-item swiper-slide">
+          {{ include 'include/shop-item.html' $value}}
+        </div>
+        {{/if}}
+        {{/each}}
+        <!-- Single Prodect -->
+
+        <!-- Single Prodect -->
+      </div>
+      <!-- Add Arrows -->
+      <div class="swiper-buttons">
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<% include('include/footer.html') %>
+
+

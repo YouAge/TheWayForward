@@ -1,0 +1,123 @@
+{{ include 'include/header.html'}}
+{{ include 'include/nav-list.html'}}
+
+
+<div class="shop-category-area pb-100px pt-70px">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12  col-md-12">
+        <!-- Shop Top Area Start -->
+        <div class="shop-top-bar d-flex">
+          <!-- Left Side start -->
+          <p>共有数量 {{total}}</p>
+          <!-- Left Side End -->
+          <!-- Right Side Start -->
+          <div class="select-shoing-wrap d-flex align-items-center">
+
+            <div class="shot-product">
+              <p>条件筛选:</p>
+
+            </div>
+            <div class="shop-select">
+              <select class="shop-sort"  id="pid"   onchange="graderChange('{{total}}')">
+                <option data-display="选择筛选条件" value="">默认</option>
+                <option value="sales">销量</option>
+                <option value="price">  价格降序</option>
+                <option value="aprice"> 价格升序</option>
+              </select>
+            </div>
+          </div>
+          <!-- Right Side End -->
+        </div>
+        <!-- Shop Top Area End -->
+
+        <!-- Shop Bottom Area Start -->
+        <div class="shop-bottom-area">
+
+          <div class="row" id="good-list">
+            {{each goods}}
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 mb-6" data-aos="fade-up" data-aos-delay="200">
+              <!-- Single Prodect -->
+              {{ include 'include/shop-item.html' $value}}
+
+            </div>
+            {{/each}}
+          </div>
+          <!--  Pagination Area Start -->
+          <div class="pro-pagination-style text-center mb-md-30px mb-lm-30px mt-6" data-aos="fade-up">
+            <ul id="nex-page">
+              <li><a class="prev" href="#"><i class="ion-ios-arrow-left"></i></a></li>
+              <li><a class="active" href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a class="next" href="#"><i class="ion-ios-arrow-right"></i></a></li>
+            </ul>
+          </div>
+          <!--  Pagination Area End -->
+        </div>
+        <!-- Shop Bottom Area End -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+    var pages = null
+
+function httpGood(grade,page=1){
+    httpRequest(`/shop-list?serial=${grade}&page=${page}`,'get',function (xhr) {
+        document.getElementById('good-list').innerHTML= xhr
+    })
+}
+
+  function graderChange(total){
+      var objs = document.getElementById('pid')
+      var grade = objs.options[objs.selectedIndex].value
+      /** 请求*/
+      console.log(grade)
+      httpGood(grade,1)
+      pageinton(total,grade)
+  }
+
+  function pagination(grade,index){
+    console.log(grade,index)
+      let nesPage = document.getElementById('nex-page')
+      nesPage.querySelector('.active').classList.remove('active')
+      nesPage.querySelectorAll('li')[index].querySelector('a').classList.add('active')
+      console.log(nesPage.querySelectorAll('li')[index])
+      httpGood(grade,index)
+      let prev = document.querySelector('#nex-page .prev')
+      let next = document.querySelector('#nex-page .next')
+      if(index !==1){
+          prev.outerHTML  = `<a class="prev" href="javascript:void(0)" onclick="pagination('${grade}',${index-1})" ><i class="ion-ios-arrow-left" > </i></a>`
+      }else {
+          prev.outerHTML  =`<a class="prev" href="javascript:void(0)"></a>`
+      }
+      if(index !=pages){
+          next.outerHTML  = `<a class="next" href="javascript:void(0)" onclick="pagination('${grade}',${index+1})"><i class="ion-ios-arrow-right" ></i></a>`
+      }else {
+          next.outerHTML  =`<a class="next" href="javascript:void(0)"></a>`
+      }
+
+
+  }
+
+  function pageinton(total,grade) {
+        // 初始渲染
+      let nesPage = document.getElementById('nex-page')
+       pages =  Math.ceil(total/8)
+      let lis = ''
+      for(i=1;i<=pages;i++){
+          lis += `<li><a ${i===1?'class="active"':''} href='javascript:void(0)' onclick="pagination('${grade}',${i})">${i}</a></li>`
+      }
+      let prev = '<li><a class="prev" href="javascript:void(0)"><i class="ion-ios-arrow-left" ></i></a></li>'
+      let next = ` <li><a class="next" href="javascript:void(0)"><i class="ion-ios-arrow-right" onclick="pagination('${grade}',2)"></i></a></li>`
+      nesPage.innerHTML =  ` ${prev} ${lis} ${next}`
+  }
+
+    pageinton('{{total}}','')
+</script>
+
+
+
+<% include('include/footer.html') %>
