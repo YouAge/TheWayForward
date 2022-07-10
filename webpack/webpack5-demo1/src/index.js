@@ -3,7 +3,7 @@ const title = require('./title.js')
 console.log('hello webapck',title);
 console.log('hello webapck2');
 
-
+import './test.jl'
 import  md from './webpack.md'
 
 console.log(md)

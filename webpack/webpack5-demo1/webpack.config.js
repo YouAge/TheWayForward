@@ -14,6 +14,7 @@ module.exports = {
     rules: [
       {test: /.css$/, use: [ 'style-loader','css-loader']},
       {test: /.md$/, use: ['html-loader',path.resolve(__dirname,'./loader/marked-loader.js')]},
+      {test: /.jl$/, use: ['html-loader',path.resolve(__dirname,'./loader/jl-loader.js')]},
       {test: /.js$/, use: {
           loader: path.resolve(__dirname,'./loader/banner-loader.js'),
           options:{
